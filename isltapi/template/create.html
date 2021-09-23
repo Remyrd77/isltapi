@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ISLT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <div class="testbox">
+        <form action="sendData" method="POST">
+            <div class="banner">
+                <h1>Enter Data</h1>
+            </div>
+            <br/>
+            <fieldset>
+                <legend>Fill CSV Data</legend>
+                <p>Participant 1</p>
+                <div class="item">
+                    <label for="pg"> PG
+                        <span>*</span>
+                    </label>
+                    <input name="pg" id="pg" type="number" value="{{ pg }}">
+                </div>
+                <div class="item">
+                    <label for="word">Word
+                        <span>*</span>
+                    </label>
+                    <input name="word" id="word" type="text" value="{{ word }}">
+                </div>
+                <div class="item">
+                    <label for="definition">Definition
+                        <span>*</span>
+                    </label>
+                    <input name="definition" id="definition" type="text" value="{{ definition }}">
+                </div>
+                <div class="item">
+                    <label for="sentence">Sentence
+                        <span>*</span>
+                    </label>
+                    <input name="sentence" id="sentence" type="text" value="{{ sentence }}">
+                </div>
+                <div class="item">
+                    <label for="category">category
+                        <span>*</span>
+                    </label>
+                    <input name="category" id="category" type="text" value="{{ category }}">
+                </div>
+                <div class="item">
+                    <label for="sample">Sample
+                        <span>*</span>
+                    </label>
+                    <input name="sample" id="sample" type="text" value="{{ sample }}">
+                </div>
+                <div class="item">
+                    <label for="synonyms">Synonyms
+                        <span>*</span>
+                    </label>
+                    <input name="synonyms" id="synonyms" type="text" value="{{ synonyms }}">
+                </div>
+            </fieldset>
+            <div class="btn-block">
+                <button type="submit" href="/">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

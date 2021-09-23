@@ -1,6 +1,12 @@
-body{
+body {
     background-color: #ec2b75d7;
 }
+
+.dataform,
+.container {
+    margin-top: 18px;
+}
+
 .item {
     margin-left: 5px;
     padding: 2px;

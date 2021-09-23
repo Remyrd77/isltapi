@@ -22,63 +22,27 @@
                     <h5 class="card-title">Fill CSV Data</h5>
                     <form class="form-inline" action="sendData" method="POST">
                         <div class="item">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">PG</span>
-                                </div>
-                                <input name="pg" id="pg" type="number" value="{{ pg }}">
-                            </div>
+                            <input name="pg" id="pg" type="number" value="{{ pg }}" placeholder="Enter Page Number">
                         </div>
                         <div class="item">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Word</span>
-                                </div>
-                                <input name="word" id="word" type="text" value="{{ word }}">
-                            </div>
+                            <input name="word" id="word" type="text" value="{{ word }}" placeholder="Enter Word">
                         </div>
                         <div class="item">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Definition</span>
-                                </div>
-                                <input name="definition" id="definition" type="text" value="{{ definition }}">
-                            </div>
+                            <input name="definition" id="definition" type="text" value="{{ definition }}" placeholder="Enter Definition">
+                        </div>
 
-                        </div>
                         <div class="item">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Sentence</span>
-                                </div>
-                                <input name="sentence" id="sentence" type="text" value="{{ sentence }}">
-                            </div>
+                            <input name="sentence" id="sentence" type="text" value="{{ sentence }}" placeholder="Enter Sentence">
+                        </div>
 
+                        <div class="item">
+                            <input name="category" id="category" type="text" value="{{ category }}" placeholder="Enter Category">
                         </div>
                         <div class="item">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Category</span>
-                                </div>
-                                <input name="category" id="category" type="text" value="{{ category }}">
-                            </div>
+                            <input name="sample" id="sample" type="text" value="{{ sample }}" placeholder="Enter Sample">
                         </div>
                         <div class="item">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Sample</span>
-                                </div>
-                                <input name="sample" id="sample" type="text" value="{{ sample }}">
-                            </div>
-
-                        </div>
-                        <div class="item">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Synonyms</span>
-                                </div>
-                                <input name="synonyms" id="synonyms" type="text" value="{{ synonyms }}">
-                            </div>
+                            <input name="synonyms" id="synonyms" type="text" value="{{ synonyms }}" placeholder="Enter Synonyms">
                         </div>
                         <div class="btn-block">
                             <button type="submit" class="btn btn-info" href="/">Save</button>

@@ -6,7 +6,9 @@ body {
 .container {
     margin-top: 18px;
 }
-
+.input-group-prepend {
+    max-width: 4rem;;
+}
 .item {
     margin-left: 5px;
     padding: 2px;

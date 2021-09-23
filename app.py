@@ -21,5 +21,5 @@ def sendData():
     postData= pd.json_normalize(request.form)
     newData = pd.concat([data,postData],ignore_index=True)
     # adding new data into csv
-    newData.to_csv('newISLT_data.csv',index=False)
+    newData.to_csv('ISLT_data.csv',index=False)
     return request.form

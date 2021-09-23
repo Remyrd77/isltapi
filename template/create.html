@@ -16,69 +16,67 @@
 <body>
     <div class="container">
         <div class="textbox">
-            <form action="sendData" method="POST">
-                <fieldset>
-                    <legend>Fill CSV Data</legend>
-                    <div class="item">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">PG</span>
-                            </div>
-                            <input name="pg" id="pg" type="number" value="{{ pg }}">
+            <form class="form-inline" action="sendData" method="POST">
+                <legend>Fill CSV Data</legend>
+                <div class="item">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">PG</span>
                         </div>
+                        <input name="pg" id="pg" type="number" value="{{ pg }}">
                     </div>
-                    <div class="item">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Word</span>
-                            </div>
-                            <input name="word" id="word" type="text" value="{{ word }}">
+                </div>
+                <div class="item">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Word</span>
                         </div>
+                        <input name="word" id="word" type="text" value="{{ word }}">
                     </div>
-                    <div class="item">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Definition</span>
-                            </div>
-                            <input name="definition" id="definition" type="text" value="{{ definition }}">
+                </div>
+                <div class="item">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Definition</span>
                         </div>
+                        <input name="definition" id="definition" type="text" value="{{ definition }}">
+                    </div>
 
-                    </div>
-                    <div class="item">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Sentence</span>
-                            </div>
-                            <input name="sentence" id="sentence" type="text" value="{{ sentence }}">
+                </div>
+                <div class="item">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Sentence</span>
                         </div>
+                        <input name="sentence" id="sentence" type="text" value="{{ sentence }}">
+                    </div>
 
-                    </div>
-                    <div class="item">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Category</span>
-                            </div>
-                            <input name="category" id="category" type="text" value="{{ category }}">
+                </div>
+                <div class="item">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Category</span>
                         </div>
+                        <input name="category" id="category" type="text" value="{{ category }}">
                     </div>
-                    <div class="item">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Sample</span>
-                            </div>
-                            <input name="sample" id="sample" type="text" value="{{ sample }}">
+                </div>
+                <div class="item">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Sample</span>
                         </div>
+                        <input name="sample" id="sample" type="text" value="{{ sample }}">
+                    </div>
 
-                    </div>
-                    <div class="item">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Synonyms</span>
-                            </div>
-                            <input name="synonyms" id="synonyms" type="text" value="{{ synonyms }}">
+                </div>
+                <div class="item">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Synonyms</span>
                         </div>
+                        <input name="synonyms" id="synonyms" type="text" value="{{ synonyms }}">
                     </div>
-                </fieldset>
+                </div>
                 <div class="btn-block">
                     <button type="submit" class="btn btn-info" href="/">Save</button>
                 </div>

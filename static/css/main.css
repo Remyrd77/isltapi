@@ -1,3 +1,7 @@
 body{
     background-color: #ec2b75d7;
 }
+.item {
+    margin-left: 5px;
+    padding: 2px;
+}

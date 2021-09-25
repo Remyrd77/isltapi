@@ -3,8 +3,11 @@ from flask import request,render_template
 import pandas as pd
 
 cols=["pg","word","definition","sentence","category","sample","synonyms"]
-data = pd.read_csv('./ISLT_data.csv', sep=',', engine='python', usecols=cols,na_values = [''])
+data = pd.read_csv('ISLT_data.csv', sep=',', engine='python', usecols=cols,na_values = [''])
 json_data = data.to_json(orient = "records")
+json_mylist = json.dumps(json_data)
+json_list = json_mylist.replace("\\","")
+print(json_list)
 
 app = flask.Flask(__name__,template_folder='template')
 
@@ -15,7 +18,7 @@ def home():
    return render_template('create.html')
 @app.route('/getData')
 def getData():
-    return json_data
+    return json_list
 @app.route('/sendData', methods=['POST']) 
 def sendData():
     postData= pd.json_normalize(request.form)

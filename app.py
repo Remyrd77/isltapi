@@ -5,9 +5,9 @@ import pandas as pd
 cols=["pg","word","definition","sentence","category","sample","synonyms"]
 data = pd.read_csv('ISLT_data.csv', sep=',', engine='python', usecols=cols,na_values = [''])
 json_data = data.to_json(orient = "records")
-json_mylist = json.dumps(json_data)
-json_list = json_mylist.replace("\\","")
+json_list = json_data.replace("\\","")
 print(json_list)
+
 
 app = flask.Flask(__name__,template_folder='template')
 

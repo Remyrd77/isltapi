@@ -16,9 +16,11 @@ print('***Backend Running***')
 @app.route('/')
 def home():
    return render_template('create.html')
-@app.route('/getData')
+@app.route('/getData',methods=['GET'])
 def getData():
-    return json_list
+    response = flask.jsonify(json_list)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 @app.route('/sendData', methods=['POST']) 
 def sendData():
     postData= pd.json_normalize(request.form)

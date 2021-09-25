@@ -18,7 +18,7 @@ def home():
    return render_template('create.html')
 @app.route('/getData',methods=['GET'])
 def getData():
-    response = flask.jsonify(json_list)
+    response = json_list
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 @app.route('/sendData', methods=['POST']) 

@@ -1,6 +1,5 @@
 import flask
 from flask import request,render_template
-from flask_cors import CORS
 import pandas as pd
 
 cols=["pg","word","definition","sentence","category","sample","synonyms"]
@@ -11,7 +10,7 @@ print(json_list)
 
 
 app = flask.Flask(__name__,template_folder='template')
-CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 print('***Backend Running***')
 
@@ -22,6 +21,7 @@ def home():
 def getData():
     return json_list
 @app.route('/sendData', methods=['POST']) 
+@cross_origin(origin='localhost',headers=['Content- Type','Authorization'])
 def sendData():
     postData= pd.json_normalize(request.form)
     newData = pd.concat([data,postData],ignore_index=True)
